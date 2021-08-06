@@ -1,6 +1,6 @@
 # Insomnia Princess Luna theme
 
-Theme for insomnia that is using default "Core Default" colors and adds Luna image to the left bottom corner of JSON page.
+Theme for insomnia that is using default "Core Default" colors and adds Luna image to the left bottom corner.
 
 Image can be changed by replacing `luna.png` file (must have same name and format!)
 
