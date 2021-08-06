@@ -16,7 +16,7 @@ module.exports.themes = [{
     displayName: "Luna theme",
     theme: {
         rawCss: `
-        .editor-wrapper .editor__container {
+        .request-pane.theme--pane.pane .pane__body.theme--pane__body.react-tabs {
         background-image: url(data:image/png;base64,${stringImage});
         background-position-x: 54px;
         background-position-y: bottom;
