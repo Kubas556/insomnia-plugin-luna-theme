@@ -1,28 +1,47 @@
 // For help writing plugins, visit the documentation to get started:
 //   https://support.insomnia.rest/article/173-plugins
 
-// TODO: Add plugin code here...
-
 const fs = require("fs");
 const os = require("os");
 
-let image = fs.readFileSync(os.homedir()+"/AppData/Roaming/Insomnia/plugins/insomnia-plugin-luna-theme/luna.png");
+
+if(os.platform() !== "win32") throw "Unsuported platform!"
+
+
+let image = fs.readFileSync(
+    os.platform() === "win32" ? os.homedir()+"/AppData/Roaming/Insomnia/plugins/insomnia-plugin-luna-theme/luna.png" :
+    ""
+    );
 let stringImage = image.toString("base64");
 
 //image URL https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/f484215b-4e9a-42b5-9feb-77c3dec3a385/d8uxy4w-26b7903c-cd55-456e-ab71-5899ba014a88.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwic3ViIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsImF1ZCI6WyJ1cm46c2VydmljZTpmaWxlLmRvd25sb2FkIl0sIm9iaiI6W1t7InBhdGgiOiIvZi9mNDg0MjE1Yi00ZTlhLTQyYjUtOWZlYi03N2MzZGVjM2EzODUvZDh1eHk0dy0yNmI3OTAzYy1jZDU1LTQ1NmUtYWI3MS01ODk5YmEwMTRhODgucG5nIn1dXX0.Y3ZWqsBk3DMzW1YBdIELPFQr4dzz3qa2dKx_qgPLDeM
-//console.log(stringImage);
+
 module.exports.themes = [{
     name: "luna-theme",
     displayName: "Luna theme",
     theme: {
         rawCss: `
-        .request-pane.theme--pane.pane .pane__body.theme--pane__body.react-tabs {
+    .request-pane.theme--pane.pane .pane__body.theme--pane__body.react-tabs {
         background-image: url(data:image/png;base64,${stringImage});
-        background-position-x: 54px;
+        background-position-x: 5rem;
         background-position-y: bottom;
-        background-size: 37rem;
+        background-size: 70%;
         background-repeat: no-repeat;
-    }`,
+    }
+    /*#LunaOverlay {
+        width:100%;
+        height:100%;
+        position:absolute;
+        top:0;
+        pointer-events:none;
+        background-image: url(data:image/png;base64,${stringImage});
+        background-position-x: calc(1vw + 1rem);
+        background-position-y: bottom;
+        background-size: 49vmin;
+        background-repeat: no-repeat;
+        z-index:20;
+    }*/
+    `,
         styles: {
             transparentOverlay: {
                 background: {

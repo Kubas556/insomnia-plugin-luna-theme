@@ -1,10 +1,11 @@
 {
   "name": "insomnia-plugin-luna-theme",
-  "version": "0.0.1",
+  "version": "1.1.0",
   "private": true,
   "insomnia": {
     "name": "Luna theme",
-    "description": "Use default color schema and adds Princess Luna img to background of JSON page"
+    "displayName":"Princess Luna theme",
+    "description": "Use dark color schema and adds Princess Luna img to background"
   },
   "main": "main.js"
 }
