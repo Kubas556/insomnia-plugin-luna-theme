@@ -5,7 +5,11 @@
   "insomnia": {
     "name": "Luna theme",
     "displayName":"Princess Luna theme",
-    "description": "Use dark color schema and adds Princess Luna img to background"
+    "description": "Use dark color schema and adds Princess Luna img to background",
+    "images": {
+      "icon": "luna.png",
+      "cover": "cover.png"
+    }
   },
   "main": "main.js"
 }
