@@ -1,6 +1,6 @@
 {
   "name": "insomnia-plugin-luna-theme",
-  "version": "1.2.0",
+  "version": "2.0.0",
   "author": {
     "name": "Kubas556",
     "email": "jakubsedlak102@gmail.com"
@@ -12,7 +12,7 @@
   },
   "insomnia": {
     "name": "Luna theme",
-    "displayName":"Princess Luna theme",
+    "displayName": "Princess Luna theme",
     "description": "Use dark color schema and adds Princess Luna img to background",
     "images": {
       "icon": "luna.png",
